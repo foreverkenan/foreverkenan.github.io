@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>数据驱动的住宅建筑室内规划生成</title>
+	<meta name="description" content="笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录">
+	
+	<link rel="canonical" href="http://localhost:4000/2023/05/18/houselayout/">
+	<link rel="alternate" type="application/rss+xml" title="juejuezi's Personal Website" href="http://localhost:4000/feed.xml" />
+	
+	<!-- <link rel="stylesheet" href="/css/main.css"> -->
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+	<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/monokai_sublime.min.css">
+	<script type="text/javascript" src="/static/js/highlight.min.js"></script>
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/highlight.js/8.4/highlight.min.js"></script>
+    -->
+    
+	<script type="text/javascript" src="/static/js/index.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+ <!--  <body data-spy="scroll" data-target="#myAffix"> -->
+  <body>
+
+    <header>
+
+<!-- navbar -->
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">juejuezi's Personal Website</a>
+      <p class="navbar-text"></p>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+        
+          <li>
+        
+        <a href="/">Home</a></li>
+
+        
+          
+            
+              <li>
+            
+            <a href="/projects/"><span class="glyphicon "></span> Projects</a></li>
+          
+        
+          
+            
+              <li>
+            
+            <a href="/about/"><span class="glyphicon "></span> About</a></li>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</header>
+
+    <div id="main" class="container main">
+      <div class="row">
+  <div id="myArticle" class="col-sm-9">
+    <div class="post-area post">
+      <header>
+        <h1>数据驱动的住宅建筑室内规划生成</h1>
+        <p>May 18, 2023</p>
+      </header>
+      <hr>
+      <article>
+        <p>笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录</p>
+
+<h1 id="零版本">零、版本</h1>
+<p>Python 3.9.10
+torch 2.0.0+cu118
+Qt 5.14.2
+PyCharm 2023.1.1
+Visual Studio 2019.16
+Windows 10 21H2</p>
+<h1 id="一准备">一、准备</h1>
+<ol>
+  <li><a href="http://staff.ustc.edu.cn/~fuxm/projects/DeepLayout/index.html">Data-driven Interior Plan Generation for Residential Buildings</a>
+下载<a href="http://rec.ustc.edu.cn/share/185bdf80-d93e-11e9-820d-33b81cb7a670">Code</a>，解压，下载<a href="https://docs.google.com/forms/d/e/1FAIpQLSfwteilXzURRKDI5QopWCyOGkeb_CFFbRwtQ0SOPhEg0KGSfw/viewform?usp=sf_link">Data set: RPLAN</a>，解压</li>
+  <li><code class="language-plaintext highlighter-rouge">deep_layout</code>文件夹放在某个位置</li>
+  <li><code class="language-plaintext highlighter-rouge">deep_layout</code>文件夹下创建<code class="language-plaintext highlighter-rouge">dataset</code>文件夹，<code class="language-plaintext highlighter-rouge">dataset</code>文件夹下创建<code class="language-plaintext highlighter-rouge">train</code>、<code class="language-plaintext highlighter-rouge">val</code>文件夹</li>
+  <li><code class="language-plaintext highlighter-rouge">deep_layout</code>文件夹下创建<code class="language-plaintext highlighter-rouge">pickle</code>文件夹，<code class="language-plaintext highlighter-rouge">pickle</code>文件夹下创建<code class="language-plaintext highlighter-rouge">train</code>、<code class="language-plaintext highlighter-rouge">val</code>文件夹</li>
+  <li><code class="language-plaintext highlighter-rouge">deep_layout/dataset/train</code>、<code class="language-plaintext highlighter-rouge">deep_layout/dataset/val</code>文件夹下放入图片数据集，4000train+1000val，约5-10小时</li>
+  <li>PyCharm Open <code class="language-plaintext highlighter-rouge">deep_layout</code>文件夹，由于我的Python库都提前装在本地，<strong>Settings(Ctrl+Alt+S)</strong> - <strong>…</strong> - <strong>Python Interpreter</strong> - <strong>Add Interpreter</strong> - <strong>Add Local Interpreter</strong>，勾选<strong>Inherit global site-packages</strong></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">write_pickle.py</code>，其中<code class="language-plaintext highlighter-rouge">deep_layout/pickle/train</code>、<code class="language-plaintext highlighter-rouge">deep_layout/pickle/val</code>文件夹应该生成和数据集名字、数量对应的 <strong>.pkl</strong> 文件</li>
+  <li>在8-15依次打开<code class="language-plaintext highlighter-rouge">deep_layout/train/xxx</code>文件夹，除了<code class="language-plaintext highlighter-rouge">pretrained_model</code>文件夹</li>
+  <li><code class="language-plaintext highlighter-rouge">config_continue.py</code>中
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_root</span> <span class="o">=</span> <span class="s">'../pickle/train_dataset'</span>
+<span class="n">val_data_root</span> <span class="o">=</span> <span class="s">'../pickle/val_dataset'</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">train_data_root</span> <span class="o">=</span> <span class="s">'../../pickle/train'</span>  
+<span class="n">val_data_root</span> <span class="o">=</span> <span class="s">'../../pickle/val'</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">train_continue.py</code>中
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">score_connect</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="n">score_model</span><span class="p">)</span>  
+<span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">score_connect</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">score_connect</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="p">.</span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">int64</span><span class="p">)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">score_connect</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>  
+</code></pre></div>    </div>
+  </li>
+  <li>Run <code class="language-plaintext highlighter-rouge">train_continue.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd train/Continue
+python train_continue.py train
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">config_living.py</code>同8 <code class="language-plaintext highlighter-rouge">config_continue.py</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">train_living.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../Living
+python train_living.py train
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">config_location.py</code>同8 <code class="language-plaintext highlighter-rouge">config_continue.py</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">train_location.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../Location
+python train_location.py train
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">config_wall.py</code>同8 <code class="language-plaintext highlighter-rouge">config_continue.py</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">train_wall.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../Wall
+python train_wall.py train
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">deep_layout/train/xxx/checkpoints/yyy.pth</code>中，八个 <strong>.pth</strong> 复制到<code class="language-plaintext highlighter-rouge">deep_layout/synth/trained_model</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>living_fc1_300.pth, living_resnet34_300.pth continue_fc2_300.pth, continue_resnet34_300.pth location_up1_100.pth, location_resnet34_100.pth wall_up1_100.pth, wall_resnet34_100.pth
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">synth.py</code>中
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">clock</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">264</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">clock</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">284</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">clock</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">288</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">floorplan_synth.py</code>中
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">self</span><span class="p">.</span><span class="n">boundary</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">floorplan</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+<span class="bp">self</span><span class="p">.</span><span class="n">inside</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">floorplan</span><span class="p">[:,:,</span><span class="mi">3</span><span class="p">])</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="bp">self</span><span class="p">.</span><span class="n">boundary</span> <span class="o">=</span> <span class="n">floorplan</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="bp">self</span><span class="p">.</span><span class="n">inside</span> <span class="o">=</span> <span class="n">floorplan</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Run <code class="language-plaintext highlighter-rouge">synth.py</code>，其中<code class="language-plaintext highlighter-rouge">deep_layout/synth/synth_output</code>文件夹应该生成与<code class="language-plaintext highlighter-rouge">deep_layout/synth/synth_input</code>文件夹对应图片，输出为绿色线条，<a href="https://www.bilibili.com/video/BV1oZ4y1Y7bM?p=12&amp;vd_source=45823cc7f3ac505694c035dd264cf594">2022年（第十届）中国科学技术大学《计算机图形学》暑期课程</a> P12 1:15:24，没有绿线说明训练数据集太少或其他未知问题</li>
+  <li><code class="language-plaintext highlighter-rouge">vectorization.py</code>中
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">clock</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">755</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">755</span>
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">clock</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">778</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">clock</span><span class="p">()</span> <span class="o">//</span><span class="n">line</span> <span class="mi">782</span>
+<span class="o">//</span> <span class="o">=&gt;</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Run <code class="language-plaintext highlighter-rouge">vectorization.py</code>，<code class="language-plaintext highlighter-rouge">deep_layout/synth_normalization</code>生成矢量化图片</li>
+  <li><code class="language-plaintext highlighter-rouge">deep_layout/visualization/Deeplayout/Deeplayout.vcxproj.user</code>中
+```</li>
+</ol>
+<QTDIR>F:\Qt5.5.1\5.5\msvc2013_64</QTDIR>
+<p>//line 5、9、13、17
+// =&gt;</p>
+<QTDIR>C:\Qt\Qt5.14.2\5.14.2\msvc2017_64</QTDIR>
+<p>//example</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>23. Visual Studio Open `deep_layout/visualization/Deeplayout.sln`，如果上一步已经打开Visual Studio则重启Visual Studio
+24. Qt加入**环境变量** - **系统变量** - **Path**
+</code></pre></div></div>
+<p>C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin //example
+```</p>
+<ol>
+  <li>运行</li>
+  <li>Open 矢量化图片 Render</li>
+</ol>
+
+      </article>
+      <hr>
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+            <a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a>
+            <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+        </div>
+        <script>
+            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+	
+    <!-- duoshuo.com javascript include code. -->    
+    
+    <!-- disqus.com javascript include code. -->
+	
+    <div class="post-area post comment">
+        <div id="disqus_thread"></div>
+    </div>
+	<script>
+		var disqus_config = function () {
+			this.page.url = "http://foreverkenan.github.io/2023/05/18/houselayout/"; 
+			this.page.identifier = "/2023/05/18/houselayout"; 
+		};
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//foreverkenan.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	
+    
+  </div>
+  
+  <div id="content" class="col-sm-3">
+    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+  
+</div>
+    </div>
+
+    
+    <div id="top" data-toggle="tooltip" data-placement="left" title="back to top">
+      <a href="javascript:;">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+      </a>
+    </div>
+
+    <footer class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="mailto:123@yeah.net"><span class="glyphicon glyphicon-envelope"></span> 123@yeah.net</a>
+        <span class="point"> · </span>
+        
+          <a href="https://github.com/foreverkenan">
+            <span class="icon">
+              <svg viewBox="0 0 16 16">
+                <path fill="#aaa" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            Github
+            <!-- <span>foreverkenan</span> -->
+          </a>
+          
+          <span class="point"> · </span>
+          <span><a href="https://github.com/foreverkenan/foreverkenan.github.io/blob/master/_posts/Paper/houselayout/2023-05-18-houselayout.md">View source</a></span>
+          <span class="point"> · </span>
+          <span><a class="newpost" href="javascript:;">New post</a></span>
+		  <span class="point"> · </span>
+          <span><a href="/feed.xml">RSS</a></span>
+          <span class="point"> · </span>
+          <span>&copy; 2015 LiXizhi</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script type="text/javascript">
+    function OnClickNewPost()
+    {
+        var title = prompt("Please enter title of your post");
+        if (title!=null){
+            title = title.replace(" ", "-");
+            var currentdate = new Date();
+            var urlNewPage = "https://github.com/foreverkenan/foreverkenan.github.io/new/master?filename=_posts/" 
+                + currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate() + "-" + title + ".md";
+                
+            var defaultText =  [
+                '---',
+                'layout: post',
+                'comments: true',
+                'categories: diary',
+                '---',
+                '## Title',
+                'text'
+                ].join('\n');
+            urlNewPage += "&value=" + encodeURIComponent(defaultText);
+            window.open(urlNewPage);
+        }
+    }
+    
+    $(function() {
+      // CreateNewPostLinks
+      $('.newpost').each(function(){
+          $(this).click(OnClickNewPost);
+      });
+    });
+</script>
+  
+  </body>
+</html>
