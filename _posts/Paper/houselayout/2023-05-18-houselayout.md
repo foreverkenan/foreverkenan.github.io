@@ -5,7 +5,6 @@ comments: true
 categories: Paper
 ---
 笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录
-
 # 零、版本
 Python 3.9.10
 torch 2.0.0+cu118
@@ -22,7 +21,7 @@ Windows 10 21H2
 4. `deep_layout/dataset/train`、`deep_layout/dataset/val`文件夹下放入图片数据集，4000train+1000val，约5-10小时
 5. PyCharm Open `deep_layout`文件夹，由于我的Python库都提前装在本地，**Settings(Ctrl+Alt+S)** - **...** - **Python Interpreter** - **Add Interpreter** - **Add Local Interpreter**，勾选**Inherit global site-packages**
 6. Run `write_pickle.py`，其中`deep_layout/pickle/train`、`deep_layout/pickle/val`文件夹应该生成和数据集名字、数量对应的 **.pkl** 文件
-7. 在8-15依次打开`deep_layout/train/xxx`文件夹，除了`pretrained_model`文件夹
+7. 依次打开`deep_layout/train/xxx`文件夹（其实先后无关），除了`pretrained_model`文件夹，共训练4个
 8. `config_continue.py`中
 ```python
 train_data_root = '../pickle/train_dataset'
@@ -45,25 +44,29 @@ loss = criterion(score_connect, target)
 cd train/Continue
 python train_continue.py train
 ```
+并等待
  10. `config_living.py`同8 `config_continue.py`
  11. Run `train_living.py`，确保无报错，`PyCharm Terminal`中
 ```
 cd ../Living
 python train_living.py train
 ```
+并等待
 12. `config_location.py`同8 `config_continue.py`
 13. Run `train_location.py`，确保无报错，`PyCharm Terminal`中
 ```
 cd ../Location
 python train_location.py train
 ```
+并等待
 14. `config_wall.py`同8 `config_continue.py`
 15. Run `train_wall.py`，确保无报错，`PyCharm Terminal`中
 ```
 cd ../Wall
 python train_wall.py train
 ```
-16. `deep_layout/train/xxx/checkpoints/yyy.pth`中，八个 **.pth** 复制到`deep_layout/synth/trained_model`
+并等待
+16. 全部计算完成后，`deep_layout/train/xxx/checkpoints/yyy.pth`中，八个 **.pth** 复制到`deep_layout/synth/trained_model`
 ```
 living_fc1_300.pth, living_resnet34_300.pth continue_fc2_300.pth, continue_resnet34_300.pth location_up1_100.pth, location_resnet34_100.pth wall_up1_100.pth, wall_resnet34_100.pth
 ```
