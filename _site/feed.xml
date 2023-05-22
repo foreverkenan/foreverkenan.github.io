@@ -5,14 +5,14 @@
     <description>juejuezi's Ideas &amp; Blogs</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 May 2023 22:38:08 +0800</pubDate>
-    <lastBuildDate>Sat, 20 May 2023 22:38:08 +0800</lastBuildDate>
+    <pubDate>Sun, 21 May 2023 19:57:12 +0800</pubDate>
+    <lastBuildDate>Sun, 21 May 2023 19:57:12 +0800</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>数据驱动的住宅建筑室内规划生成</title>
-        <description>&lt;p&gt;笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录&lt;/p&gt;
-
+        <description>&lt;p&gt;笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录
+&lt;img src=&quot;pic/a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;零版本&quot;&gt;零、版本&lt;/h1&gt;
 &lt;p&gt;Python 3.9.10
 torch 2.0.0+cu118
@@ -30,7 +30,7 @@ Windows 10 21H2&lt;/p&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/dataset/train&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/dataset/val&lt;/code&gt;文件夹下放入图片数据集，4000train+1000val，约5-10小时&lt;/li&gt;
   &lt;li&gt;PyCharm Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout&lt;/code&gt;文件夹，由于我的Python库都提前装在本地，&lt;strong&gt;Settings(Ctrl+Alt+S)&lt;/strong&gt; - &lt;strong&gt;…&lt;/strong&gt; - &lt;strong&gt;Python Interpreter&lt;/strong&gt; - &lt;strong&gt;Add Interpreter&lt;/strong&gt; - &lt;strong&gt;Add Local Interpreter&lt;/strong&gt;，勾选&lt;strong&gt;Inherit global site-packages&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;write_pickle.py&lt;/code&gt;，其中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/pickle/train&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/pickle/val&lt;/code&gt;文件夹应该生成和数据集名字、数量对应的 &lt;strong&gt;.pkl&lt;/strong&gt; 文件&lt;/li&gt;
-  &lt;li&gt;在8-15依次打开&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/train/xxx&lt;/code&gt;文件夹，除了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pretrained_model&lt;/code&gt;文件夹&lt;/li&gt;
+  &lt;li&gt;依次打开&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/train/xxx&lt;/code&gt;文件夹（其实先后无关），除了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pretrained_model&lt;/code&gt;文件夹，共训练4个&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_continue.py&lt;/code&gt;中
     &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;train_data_root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'../pickle/train_dataset'&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;val_data_root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'../pickle/val_dataset'&lt;/span&gt;
@@ -52,26 +52,30 @@ Windows 10 21H2&lt;/p&gt;
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd train/Continue
 python train_continue.py train
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;并等待&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_living.py&lt;/code&gt;同8 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_continue.py&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train_living.py&lt;/code&gt;，确保无报错，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyCharm Terminal&lt;/code&gt;中
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ../Living
 python train_living.py train
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;并等待&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_location.py&lt;/code&gt;同8 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_continue.py&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train_location.py&lt;/code&gt;，确保无报错，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyCharm Terminal&lt;/code&gt;中
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ../Location
 python train_location.py train
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;并等待&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_wall.py&lt;/code&gt;同8 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config_continue.py&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train_wall.py&lt;/code&gt;，确保无报错，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PyCharm Terminal&lt;/code&gt;中
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ../Wall
 python train_wall.py train
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;并等待&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/train/xxx/checkpoints/yyy.pth&lt;/code&gt;中，八个 &lt;strong&gt;.pth&lt;/strong&gt; 复制到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/synth/trained_model&lt;/code&gt;
+  &lt;li&gt;全部计算完成后，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/train/xxx/checkpoints/yyy.pth&lt;/code&gt;中，八个 &lt;strong&gt;.pth&lt;/strong&gt; 复制到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deep_layout/synth/trained_model&lt;/code&gt;
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;living_fc1_300.pth, living_resnet34_300.pth continue_fc2_300.pth, continue_resnet34_300.pth location_up1_100.pth, location_resnet34_100.pth wall_up1_100.pth, wall_resnet34_100.pth
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;

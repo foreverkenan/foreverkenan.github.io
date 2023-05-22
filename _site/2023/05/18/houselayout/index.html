@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>数据驱动的住宅建筑室内规划生成</title>
-	<meta name="description" content="笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录">
+	<meta name="description" content="笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录零、版本Python 3.9.10torch 2.0.0+cu118Qt 5.14.2PyCharm 2023.1.1Visual Studio 2019.16Windows 10 21H2一、准备  Data-driven Interior Plan Gen...">
 	
 	<link rel="canonical" href="http://localhost:4000/2023/05/18/houselayout/">
 	<link rel="alternate" type="application/rss+xml" title="juejuezi's Personal Website" href="http://localhost:4000/feed.xml" />
@@ -96,8 +96,8 @@
       </header>
       <hr>
       <article>
-        <p>笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录</p>
-
+        <p>笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录
+<img src="pic/a.png" alt="" /></p>
 <h1 id="零版本">零、版本</h1>
 <p>Python 3.9.10
 torch 2.0.0+cu118
@@ -115,7 +115,7 @@ Windows 10 21H2</p>
   <li><code class="language-plaintext highlighter-rouge">deep_layout/dataset/train</code>、<code class="language-plaintext highlighter-rouge">deep_layout/dataset/val</code>文件夹下放入图片数据集，4000train+1000val，约5-10小时</li>
   <li>PyCharm Open <code class="language-plaintext highlighter-rouge">deep_layout</code>文件夹，由于我的Python库都提前装在本地，<strong>Settings(Ctrl+Alt+S)</strong> - <strong>…</strong> - <strong>Python Interpreter</strong> - <strong>Add Interpreter</strong> - <strong>Add Local Interpreter</strong>，勾选<strong>Inherit global site-packages</strong></li>
   <li>Run <code class="language-plaintext highlighter-rouge">write_pickle.py</code>，其中<code class="language-plaintext highlighter-rouge">deep_layout/pickle/train</code>、<code class="language-plaintext highlighter-rouge">deep_layout/pickle/val</code>文件夹应该生成和数据集名字、数量对应的 <strong>.pkl</strong> 文件</li>
-  <li>在8-15依次打开<code class="language-plaintext highlighter-rouge">deep_layout/train/xxx</code>文件夹，除了<code class="language-plaintext highlighter-rouge">pretrained_model</code>文件夹</li>
+  <li>依次打开<code class="language-plaintext highlighter-rouge">deep_layout/train/xxx</code>文件夹（其实先后无关），除了<code class="language-plaintext highlighter-rouge">pretrained_model</code>文件夹，共训练4个</li>
   <li><code class="language-plaintext highlighter-rouge">config_continue.py</code>中
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train_data_root</span> <span class="o">=</span> <span class="s">'../pickle/train_dataset'</span>
 <span class="n">val_data_root</span> <span class="o">=</span> <span class="s">'../pickle/val_dataset'</span>
@@ -137,26 +137,30 @@ Windows 10 21H2</p>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd train/Continue
 python train_continue.py train
 </code></pre></div>    </div>
+    <p>并等待</p>
   </li>
   <li><code class="language-plaintext highlighter-rouge">config_living.py</code>同8 <code class="language-plaintext highlighter-rouge">config_continue.py</code></li>
   <li>Run <code class="language-plaintext highlighter-rouge">train_living.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../Living
 python train_living.py train
 </code></pre></div>    </div>
+    <p>并等待</p>
   </li>
   <li><code class="language-plaintext highlighter-rouge">config_location.py</code>同8 <code class="language-plaintext highlighter-rouge">config_continue.py</code></li>
   <li>Run <code class="language-plaintext highlighter-rouge">train_location.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../Location
 python train_location.py train
 </code></pre></div>    </div>
+    <p>并等待</p>
   </li>
   <li><code class="language-plaintext highlighter-rouge">config_wall.py</code>同8 <code class="language-plaintext highlighter-rouge">config_continue.py</code></li>
   <li>Run <code class="language-plaintext highlighter-rouge">train_wall.py</code>，确保无报错，<code class="language-plaintext highlighter-rouge">PyCharm Terminal</code>中
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../Wall
 python train_wall.py train
 </code></pre></div>    </div>
+    <p>并等待</p>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">deep_layout/train/xxx/checkpoints/yyy.pth</code>中，八个 <strong>.pth</strong> 复制到<code class="language-plaintext highlighter-rouge">deep_layout/synth/trained_model</code>
+  <li>全部计算完成后，<code class="language-plaintext highlighter-rouge">deep_layout/train/xxx/checkpoints/yyy.pth</code>中，八个 <strong>.pth</strong> 复制到<code class="language-plaintext highlighter-rouge">deep_layout/synth/trained_model</code>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>living_fc1_300.pth, living_resnet34_300.pth continue_fc2_300.pth, continue_resnet34_300.pth location_up1_100.pth, location_resnet34_100.pth wall_up1_100.pth, wall_resnet34_100.pth
 </code></pre></div>    </div>
   </li>
