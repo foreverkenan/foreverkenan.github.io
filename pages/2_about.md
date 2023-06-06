@@ -17,6 +17,7 @@ Forked from https://github.com/LiXizhi/lixizhi.github.io
 ## About me
 
 一个虾头谱信楠
+目前在虚构的枝江大学附属医院精神科癔症3室15床接受治疗
 
 [bilibili](https://space.bilibili.com/73693594?spm_id_from=333.1007.0.0)
 
