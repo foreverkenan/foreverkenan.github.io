@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "c6c43f7dcf6b1f44",
+    "type": "split",
+    "children": [
+      {
+        "id": "7dc883f9d859e99a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c90d75bcb4a6f681",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Others/2023-06-07-autodl.md",
+                "mode": "source",
+                "source": false
+              }
+            },
+            "group": "73c24768a4a569f1"
+          }
+        ]
+      },
+      {
+        "id": "b5f345bae0925511",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f62ed1c739d044d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Others/2023-06-07-autodl.md",
+                "mode": "preview",
+                "source": false
+              }
+            },
+            "group": "73c24768a4a569f1"
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "21370fe943e5ddf3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ab707752a010024",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5981071535891f7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2dd6dc780bb38f00",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bfc7ade9af2e4ce6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d505f281a924db06",
+    "type": "split",
+    "children": [
+      {
+        "id": "776ae16ababe8afb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ec193390106e1c0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Others/2023-06-07-autodl.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "53e258ee3f126174",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Others/2023-06-07-autodl.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "500acd46b43aef45",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5c662cf1ff53074e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Others/2023-06-07-autodl.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "f62ed1c739d044d6",
+  "lastOpenFiles": [
+    "Others/2023-2-11-OpenBabel最小环.md",
+    "Others/2023-06-07-autodl.md",
+    "Others/2023-2-10-OpenBabel安装.md",
+    "Paper/houselayout/2023-05-18-houselayout.md",
+    "HDK/Pasted image 20221106221832.png",
+    "HDK/Pasted image 20221108144754.png",
+    "HDK/Pasted image 20221031121037.png",
+    "HDK/2022-10-18-hdkmain0.md"
+  ]
+}
