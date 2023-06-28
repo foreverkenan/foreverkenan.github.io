@@ -4,6 +4,7 @@ title:  "数据驱动的住宅建筑室内规划生成"
 comments: true
 categories: Paper
 ---
+
 笔记是做成功一遍后，再做第二遍。其中第二遍，边做边记录
 # 零、版本
 Python 3.9.10
@@ -125,3 +126,4 @@ C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin //example
 ```
 25. 运行
 26. Open 矢量化图片 Render
+# 二、Houdini

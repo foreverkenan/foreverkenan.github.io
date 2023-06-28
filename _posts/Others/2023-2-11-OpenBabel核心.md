@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "OpenBabel最小环主要逻辑代码"
+title:  "OpenBabel核心"
 comments: true
 categories: Others
 ---

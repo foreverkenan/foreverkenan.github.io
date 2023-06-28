@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "OpenBabel下载编译修改"
+title:  "OpenBabel安装"
 comments: true
 categories: Others
 ---
@@ -30,8 +30,6 @@ openbabel311是我自己改了名字，同时也改了位置
 2. lib
 
 3. dll
-
-
 
 
 plugin.h里要改个东西 开头加上，否则strcasecmp报错
