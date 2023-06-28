@@ -4,40 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "7dc883f9d859e99a",
+        "id": "1671a5904e7aaf43",
         "type": "tabs",
         "children": [
           {
-            "id": "c90d75bcb4a6f681",
+            "id": "8c30e73065ca17b8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "Others/‎2022‎年-12‎-‎20‎-osm转shp.md",
                 "mode": "source",
                 "source": false
               }
             },
-            "group": "73c24768a4a569f1"
+            "group": "0e04e5aca17bf492"
           }
         ]
       },
       {
-        "id": "b5f345bae0925511",
+        "id": "0c5cd6f03d654728",
         "type": "tabs",
         "children": [
           {
-            "id": "f62ed1c739d044d6",
+            "id": "6e8d5a1d65bc38cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
-                "mode": "source",
+                "file": "Others/‎2022‎年-12‎-‎20‎-osm转shp.md",
+                "mode": "preview",
                 "source": false
               }
             },
-            "group": "73c24768a4a569f1"
+            "group": "0e04e5aca17bf492"
           }
         ]
       }
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d505f281a924db06",
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "Others/‎2022‎年-12‎-‎20‎-osm转shp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "Others/‎2022‎年-12‎-‎20‎-osm转shp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md"
+                "file": "Others/‎2022‎年-12‎-‎20‎-osm转shp.md"
               }
             }
           }
@@ -166,16 +167,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c90d75bcb4a6f681",
+  "active": "8c30e73065ca17b8",
   "lastOpenFiles": [
-    "Paper/houselayout/2023-05-21-分析visualization.md",
-    "Paper/iPLAN/2023-06-20-iPLAN.md",
-    "Paper/nfp/2023-03-15-nfp.md",
-    "Paper/houselayout/2023-05-18-houselayout.md",
-    "Paper/iPLAN",
-    "Others/2023-2-10-OpenBabel安装.md",
-    "Others/2023-2-11-OpenBabel核心.md",
+    "Others/2022-12-20-osm转shp.md",
     "Others/2023-06-07-autodl.md",
+    "Paper/houselayout/2023-05-21-分析visualization.md",
+    "Others/‎2022‎年-12‎-‎20‎-osm转shp.md",
+    "Others/2022‎-‎12‎-‎21‎-shp倾斜原因.md",
+    "Others/2023-2-11-OpenBabel核心.md",
+    "Others/解决经纬度倾斜问题.canvas",
+    "Paper/iPLAN/2023-06-20-iPLAN.md",
+    "Others/2023-2-10-OpenBabel安装.md",
+    "Paper/houselayout/2023-05-18-houselayout.md",
+    "Paper/nfp/2023-03-15-nfp.md",
+    "Paper/iPLAN",
     "HDK/2022-10-18-hdkmain0.md",
     "HDK/Pasted image 20221108183353.png",
     "HDK/Pasted image 20221108152204.png",
