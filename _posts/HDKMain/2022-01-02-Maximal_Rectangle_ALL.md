@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "HDK主线 1 最大矩形 Maximal_Rectangle_ALL"
+comments: true
+categories: HDKMain
+---
+
 .[Maximal_Rectangle_ALL](https://www.bilibili.com/video/BV1WY4y1Y7DG)
 
 这是我第一个HDK节点。主要意义在于搞清楚流程，以及尝试一些雨落柏拉图的divide节点中没有用到的东西。

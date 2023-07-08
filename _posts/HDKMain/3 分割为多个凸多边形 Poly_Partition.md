@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "HDK主线 分割为多个凸多边形 Poly_Partition"
+comments: true
+categories: HDKMain
+---
+
 [Poly_Partition](https://www.bilibili.com/video/BV1yZ4y1a7v9)
 
 纯纯的调库节点，还是CGAL，内容比较简单，所以很适合教新手过一遍流程

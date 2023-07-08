@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "AutoDL+PyCharm训练"
+comments: true
+categories: HDKMain
+---
+
 [minAreaRect](https://www.bilibili.com/video/BV1ae411T7Xr)
 
 调库，OpenCV，这个节点是为了给后面的凹多边形的最大内接做铺垫

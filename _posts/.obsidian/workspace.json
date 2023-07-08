@@ -13,31 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "HDKMain/2022-01-03-Quick_RoofNEW.md",
                 "mode": "source",
                 "source": false
               }
             },
-            "group": "d79ac3238d55f389"
+            "group": "4e0edf64ec6aec75"
           }
         ]
       },
       {
-        "id": "7d9a2310068e8866",
+        "id": "3d348d1052e0c3cd",
         "type": "tabs",
         "children": [
           {
-            "id": "199af2d9e577f138",
+            "id": "63b623ffb946c1d6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "HDKMain/2022-01-03-Quick_RoofNEW.md",
                 "mode": "source",
                 "source": false
               }
             },
-            "group": "d79ac3238d55f389"
+            "group": "4e0edf64ec6aec75"
           }
         ]
       }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "HDKMain/2022-01-03-Quick_RoofNEW.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md",
+                "file": "HDKMain/2022-01-03-Quick_RoofNEW.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/houselayout/2023-05-18-houselayout.md"
+                "file": "HDKMain/2022-01-03-Quick_RoofNEW.md"
               }
             }
           }
@@ -168,46 +168,45 @@
   },
   "active": "8c30e73065ca17b8",
   "lastOpenFiles": [
+    "HDKMain/2022-01-02-Maximal_Rectangle_ALL.md",
+    "HDKMain/Pasted image 20221106221832.png",
+    "HDKMain/2022-01-03-Quick_RoofNEW.md",
+    "HDKMain/3 分割为多个凸多边形 Poly_Partition.md",
+    "HDKMain/N void 双输入.md",
+    "HDKMain/6 最小外接矩形 minAreaRect.md",
+    "HDKMain/2022-01-01-序.md",
+    "HDKMainVEX/2023-01-02-linecircleintersect.md",
+    "HDKMainVEX/2023-01-01-目录.md",
+    "HDKMain/Pasted image 20221222195459.png",
+    "HDKMain/4 形状规则化 Shape_Regularization.md",
+    "HDKBranchVEX/0 支线目录.md",
+    "Paper/nfp/2023-03-15-nfp.md",
+    "Others/2023-2-11-OpenBabel核心.md",
+    "Others/2023-06-07-autodl.md",
+    "HDKMain/5 shp导入 SHP_importNEW.md",
+    "Others/2022‎-‎12‎-‎21‎-shp倾斜原因.md",
+    "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+    "HDKBranch/2 GA_Offset与GA_Index的区别.md",
+    "HDKBranch/3 两种参数面板 PRM_Template与THEDSFILE.md",
+    "HDKBranch/1 两种格式 OP_ERROR与void.md",
+    "HDKBranch/0 支线目录.md",
+    "HDKBranchVEX/1 基础模板-上.md",
+    "Paper/houselayout/2023-05-18-houselayout.md",
     "HDKMainVEX/Pasted image 20221124154213.png",
     "HDKMainVEX/Pasted image 20221124154915.png",
-    "HDKMainVEX/0 目录.md",
-    "HDKMainVEX/1 线圆求交点 linecircleintersect.md",
     "HDKMainVEX",
     "HDK主线/2023-01-01-0 序.md",
-    "HDKMain/Pasted image 20221222195459.png",
     "HDKMain/Pasted image 20221222195443.png",
     "HDKMain/Pasted image 20221222194906.png",
     "HDKMain/Pasted image 20221222194550.png",
     "HDKMain/Pasted image 20221216205313.png",
     "HDKMain/Pasted image 20221216205239.png",
     "HDKMain/Pasted image 20221108184854.png",
-    "HDKMain/Pasted image 20221108184506.png",
-    "HDKMain/Pasted image 20221108183353.png",
     "HDKMain/N 我的布尔 My_Boolean.md",
-    "HDKMain/N void 双输入.md",
-    "HDKMain/6 最小外接矩形 minAreaRect.md",
-    "HDKMain/5 shp导入 SHP_importNEW.md",
-    "HDKMain/2023-01-01-0 序.md",
-    "HDKMain/4 形状规则化 Shape_Regularization.md",
-    "HDKMain/3 分割为多个凸多边形 Poly_Partition.md",
-    "HDKMain/1 最大矩形 Maximal_Rectangle_ALL.md",
-    "HDKMain/2 生成坡屋顶 Quick_RoofNEW.md",
     "HDKMain",
     "HDKBranchVEX/3.md",
-    "HDKBranchVEX/2 基础模板-下.md",
-    "HDKBranchVEX/1 基础模板-上.md",
-    "HDKBranchVEX/0 支线目录.md",
     "HDKBranchVEX",
-    "HDKBranch/6 DataId.md",
-    "HDKBranch/5 HDK于VEX(Detail)的区别.md",
-    "HDKBranch/4 附加调试.md",
-    "HDKBranch/3 两种参数面板 PRM_Template与THEDSFILE.md",
-    "HDKBranch/2 GA_Offset与GA_Index的区别.md",
-    "HDKBranch/1 两种格式 OP_ERROR与void.md",
-    "HDKBranch/0 支线目录.md",
     "HDKBranch",
-    "Paper/houselayout/2023-05-18-houselayout.md",
-    "HDK支线/2 GA_Offset与GA_Index的区别.md",
     "Others/解决经纬度倾斜问题.canvas",
     "Paper/iPLAN"
   ]

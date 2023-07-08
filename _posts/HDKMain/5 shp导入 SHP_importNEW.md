@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "AutoDL+PyCharm训练"
+comments: true
+categories: HDKMain
+---
+
 [SHP_importNEW](https://www.bilibili.com/video/BV1DW4y1y7iu)
 [Houdini HDK 读取shapefile矢量数据]
 https://blog.csdn.net/weixin_44415965/article/details/128388723?spm=1001.2014.3001.5501

@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "AutoDL+PyCharm训练"
+comments: true
+categories: HDKMain
+---
+
 [Shape_Regularization](https://www.bilibili.com/video/BV16U4y1i7bm)
 
 这个节点也就是一个简单调库节点，仍然CGAL，和上一篇没啥区别，所以我会加一些新知识进来。趁着这个节点，我们尝试使用 PRM_Template 和 THEDSFILE (the Ds File) 两种方式来做参数面板。关于 THEDSFILE ，会有专门的支线来从头讲，不然直接搞这么复杂的可能会看懵。我建议可以跳过 THEDSFILE 部分，等学过基础再来重看。支线还没开始写，等以后吧

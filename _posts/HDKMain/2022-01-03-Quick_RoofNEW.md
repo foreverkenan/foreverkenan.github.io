@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "HDK主线 2 生成坡屋顶 Quick_RoofNEW"
+comments: true
+categories: HDKMain
+---
+
 [Quick_RoofNEW](https://www.bilibili.com/video/BV14B4y1i7zK)
 
 这个节点是我的第二个节点，同时也是第一次调用CGAL库，这个节点实现的效果与原版SOP_PolyExtrude一样，也可以通过[HDK中调用PolyExtrude来实现](https://www.sidefx.com/forum/topic/75466/)，但为了学习HDK与CGAL库同时顺带Dijkstra，我还是尝试完成了这个节点，由于一些不明的原因，这个节点目前仍然很容易崩溃，应该是预先的判断不够多，造成使用时的错误指针
