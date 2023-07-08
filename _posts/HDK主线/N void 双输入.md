@@ -1,0 +1,30 @@
+双输入 void格式
+
+参考 winding number
+```c
+const GEO_Detail *const mesh_geo = cookparms.inputGeo(1);
+```
+inputGeo(0)是第一个 而1是第二个输入端
+
+```c
+sopcache->update3D(*mesh_geo, mesh_prim_group, mesh_prim_group_string, 2);
+```
+
+DataId 是记录输入模型的特征，一般情况下，参数面板改一个东西，就会完整运算一次，但如果输入模型没变，只改了参数面板，那么有些东西就不需要重复计算，所以用dataid判断
+
+```c
+mesh_geo.getAttributeAsArray(mesh_geo.getP(), mesh_geo.getPointRange(), myPositions3D);
+
+mesh_geo.forEachPoint(&mesh_ptgroup, [&mesh_geo,this,&ptmap,&ptnum](const GA_Offset ptoff)
+{
+	ptmap[ptoff] = ptnum;
+	myPositions3D[ptnum] = mesh_geo.getPos3(ptoff);
+	++ptnum;
+});
+```
+
+读取到数组，转化为数组运算
+
+copytopoint也类似
+尽量规避对非detail的GU_Detail* 进行操作
+否则会出现奇怪bug，操作能改变上游数据，因为改的是指针，也就是改了地址的真实数据
