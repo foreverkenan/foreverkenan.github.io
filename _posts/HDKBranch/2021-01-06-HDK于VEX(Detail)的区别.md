@@ -1,10 +1,14 @@
+---
+layout: post
+title:  "HDK支线 5 HDK于VEX(Detail)的区别"
+comments: true
+categories: HDKBranch
+---
+
 区分开vex和hdk
 vex因为wrangle，10个面 for(1->10) removeprim，执行完才会全删除
 hdk，执行第一次deleteprim的时候，面就少了一个，如果还用 for(1->10)，
 那么后几次循环都是空指针操作，崩houdini
-
-
-
 
 ```c
 std::cout << "origin" << detail->getNumPrimitives()

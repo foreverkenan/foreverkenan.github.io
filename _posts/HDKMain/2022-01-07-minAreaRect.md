@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AutoDL+PyCharm训练"
+title:  "HDK主线 6 最小外接矩形 minAreaRect"
 comments: true
 categories: HDKMain
 ---

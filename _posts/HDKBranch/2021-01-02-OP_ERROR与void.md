@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "HDK支线 1 两种格式 OP_ERROR与void"
+comments: true
+categories: HDKBranch
+---
+
 打开雨落柏拉图的divide和官方示例SOP_Star
 ```
 C:\Program Files\Side Effects Software\Houdini 19.5.303\toolkit\samples\SOP\SOP_Star

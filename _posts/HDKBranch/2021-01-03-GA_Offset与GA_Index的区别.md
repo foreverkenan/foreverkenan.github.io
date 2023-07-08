@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "HDK支线 2 GA_Offset与GA_Index的区别"
+comments: true
+categories: HDKBranch
+---
+
 ```
 C:\Program Files\Side Effects Software\Houdini 19.5.368\toolkit\slides\HDK12_Intro.pdf
 ```

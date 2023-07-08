@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AutoDL+PyCharm训练"
+title:  "HDK主线 4 形状规则化 Shape_Regularization"
 comments: true
 categories: HDKMain
 ---
