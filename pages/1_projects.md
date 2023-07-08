@@ -12,10 +12,6 @@ permalink: /projects/
 
 aaaaaaaaaaa
 
-## HDK
-
 bbbbbbbbbbbbbbb
-
-## Paper（复现别人论文）
 
 ccccccccccc
