@@ -13,31 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+                "file": "HDK主线/0 序.md",
                 "mode": "source",
                 "source": false
               }
             },
-            "group": "0e04e5aca17bf492"
+            "group": "d79ac3238d55f389"
           }
         ]
       },
       {
-        "id": "0c5cd6f03d654728",
+        "id": "7d9a2310068e8866",
         "type": "tabs",
         "children": [
           {
-            "id": "6e8d5a1d65bc38cb",
+            "id": "199af2d9e577f138",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+                "file": "HDK主线/0 序.md",
                 "mode": "preview",
                 "source": false
               }
             },
-            "group": "0e04e5aca17bf492"
+            "group": "d79ac3238d55f389"
           }
         ]
       }
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d505f281a924db06",
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+                "file": "HDK主线/0 序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+                "file": "HDK主线/0 序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Others/‎2022‎-12‎-‎20‎-osm转shp.md"
+                "file": "HDK主线/0 序.md"
               }
             }
           }
@@ -166,10 +167,35 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8c30e73065ca17b8",
+  "active": "199af2d9e577f138",
   "lastOpenFiles": [
-    "Others/2022‎-‎12‎-‎21‎-shp倾斜原因.md",
+    "Paper/houselayout/2023-05-18-houselayout.md",
+    "HDK主线/0 序.md",
+    "HDK支线/2 GA_Offset与GA_Index的区别.md",
+    "HDK支线/1 两种格式 OP_ERROR与void.md",
+    "HDK支线/0 支线目录.md",
     "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+    "HDK主线VEX/Pasted image 20221124154915.png",
+    "HDK主线VEX/Pasted image 20221124154213.png",
+    "HDK主线VEX/1 线圆求交点 linecircleintersect.md",
+    "HDK主线VEX/0 目录.md",
+    "HDK主线/Pasted image 20221222195459.png",
+    "HDK主线/Pasted image 20221222195443.png",
+    "HDK主线/Pasted image 20221222194906.png",
+    "HDK主线/Pasted image 20221222194550.png",
+    "HDK主线/Pasted image 20221216205313.png",
+    "HDK主线/Pasted image 20221216205239.png",
+    "HDK主线/Pasted image 20221108184854.png",
+    "HDK主线/Pasted image 20221108184506.png",
+    "HDK支线VEX/3.md",
+    "HDK支线VEX/2 基础模板-下.md",
+    "HDK支线VEX/1 基础模板-上.md",
+    "HDK支线VEX/0 支线目录.md",
+    "HDK支线/6 DataId.md",
+    "HDK支线/5 HDK于VEX(Detail)的区别.md",
+    "HDK支线/4 附加调试.md",
+    "HDK支线/3 两种参数面板 PRM_Template与THEDSFILE.md",
+    "Others/2022‎-‎12‎-‎21‎-shp倾斜原因.md",
     "Others/2022-12-20-osm转shp.md",
     "Others/2023-06-07-autodl.md",
     "Paper/houselayout/2023-05-21-分析visualization.md",
@@ -177,16 +203,9 @@
     "Others/解决经纬度倾斜问题.canvas",
     "Paper/iPLAN/2023-06-20-iPLAN.md",
     "Others/2023-2-10-OpenBabel安装.md",
-    "Paper/houselayout/2023-05-18-houselayout.md",
     "Paper/nfp/2023-03-15-nfp.md",
     "Paper/iPLAN",
     "HDK/2022-10-18-hdkmain0.md",
-    "HDK/Pasted image 20221108183353.png",
-    "HDK/Pasted image 20221108152204.png",
-    "HDK/Pasted image 20221108152154.png",
-    "HDK/Pasted image 20221108144754.png",
-    "HDK/Pasted image 20221106221832.png",
-    "HDK/Pasted image 20221031121037.png",
     "Others/2023-2-11-OpenBabel最小环.md"
   ]
 }
