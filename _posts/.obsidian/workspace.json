@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDK主线/0 序.md",
+                "file": "HDK主线/2023-01-01-0 序.md",
                 "mode": "source",
                 "source": false
               }
@@ -32,7 +32,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDK主线/0 序.md",
+                "file": "HDK主线/2023-01-01-0 序.md",
                 "mode": "preview",
                 "source": false
               }
@@ -89,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d505f281a924db06",
@@ -106,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HDK主线/0 序.md",
+                "file": "HDK主线/2023-01-01-0 序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HDK主线/0 序.md",
+                "file": "HDK主线/2023-01-01-0 序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HDK主线/0 序.md"
+                "file": "HDK主线/2023-01-01-0 序.md"
               }
             }
           }
@@ -167,10 +166,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "199af2d9e577f138",
+  "active": "8c30e73065ca17b8",
   "lastOpenFiles": [
     "Paper/houselayout/2023-05-18-houselayout.md",
-    "HDK主线/0 序.md",
+    "HDK主线/2023-01-01-0 序.md",
     "HDK支线/2 GA_Offset与GA_Index的区别.md",
     "HDK支线/1 两种格式 OP_ERROR与void.md",
     "HDK支线/0 支线目录.md",
