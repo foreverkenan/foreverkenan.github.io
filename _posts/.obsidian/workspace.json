@@ -8,36 +8,34 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8c30e73065ca17b8",
+            "id": "49813a42facfad42",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDKMain/2022-01-04-Poly_Partition.md",
+                "file": "Others/2023-07-13-数字手写识别完整版.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
-            },
-            "group": "4e0edf64ec6aec75"
+            }
           }
         ]
       },
       {
-        "id": "3d348d1052e0c3cd",
+        "id": "9f4298310b464aa6",
         "type": "tabs",
         "children": [
           {
-            "id": "63b623ffb946c1d6",
+            "id": "48dd682c5e9cc055",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HDKMain/2022-01-04-Poly_Partition.md",
-                "mode": "source",
+                "file": "Others/2023-07-13-数字手写识别完整版.md",
+                "mode": "preview",
                 "source": false
               }
-            },
-            "group": "4e0edf64ec6aec75"
+            }
           }
         ]
       }
@@ -105,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HDKMain/2022-01-04-Poly_Partition.md",
+                "file": "Others/2023-07-13-数字手写识别完整版.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HDKMain/2022-01-04-Poly_Partition.md",
+                "file": "Others/2023-07-13-数字手写识别完整版.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HDKMain/2022-01-04-Poly_Partition.md"
+                "file": "Others/2023-07-13-数字手写识别完整版.md"
               }
             }
           }
@@ -166,44 +164,45 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8c30e73065ca17b8",
+  "active": "49813a42facfad42",
   "lastOpenFiles": [
+    "Pasted image 20230712030544.png",
+    "Pasted image 20230712025000.png",
+    "Pasted image 20230712024706.png",
+    "Others/2023-07-13-数字手写识别完整版.md",
+    "Pasted image 20230712022331.png",
+    "Pasted image 20230712021430.png",
+    "Pasted image 20230712021008.png",
+    "Pasted image 20230712020824.png",
+    "Pasted image 20230712020806.png",
+    "Pasted image 20230712020448.png",
+    "Pasted image 20230712020410.png",
+    "Pasted image 20230712020335.png",
+    "Others/‎2022‎-12‎-‎20‎-osm转shp.md",
+    "HDKMain/2022-01-04-Poly_Partition.md",
     "HDKMain/2022-01-01-序.md",
     "HDKBranchVEX/2020-01-01-支线目录.md",
     "HDKBranchVEX/2020-01-03-基础模板-下.md",
-    "HDKBranchVEX/Pasted image 20221124180442.png",
     "HDKBranchVEX/2020-01-02-基础模板-上.md",
     "HDKBranchVEX/3.md",
     "HDKBranch/2021-01-01-支线目录.md",
-    "HDKBranch/RS5}NGD$CIT5[D16U%T)2%J.jpg",
-    "HDKBranch/Pasted image 20221223233932.png",
     "HDKBranch/2021-01-07-DataId.md",
     "HDKBranch/2021-01-06-HDK于VEX(Detail)的区别.md",
     "HDKBranch/2021-01-05-附加调试.md",
     "HDKBranch/2021-01-04-两种参数面板 PRM_Template与THEDSFILE.md",
     "HDKBranch/2021-01-03-GA_Offset与GA_Index的区别.md",
     "HDKBranch/2021-01-02-OP_ERROR与void.md",
-    "HDKBranch/Pasted image 20221223223156.png",
     "HDKMainVEX/2023-01-01-目录.md",
     "HDKMainVEX/2023-01-02-linecircleintersect.md",
     "HDKMain/2022-01-09-void双输入.md",
-    "HDKMain/Pasted image 20221031121037.png",
     "HDKMain/2022-01-08-My_Boolean.md",
     "HDKMain/2022-01-07-minAreaRect.md",
     "HDKMain/2022-01-06-SHP_importNEW.md",
     "HDKMain/2022-01-05-Shape_Regularization.md",
-    "HDKMain/2022-01-04-Poly_Partition.md",
     "HDKMain/2022-01-03-Quick_RoofNEW.md",
     "HDKMain/2022-01-02-Maximal_Rectangle_ALL.md",
-    "HDKMain/Pasted image 20221106221832.png",
-    "HDKMain/Pasted image 20221222195459.png",
     "Paper/nfp/2023-03-15-nfp.md",
-    "Others/2023-2-11-OpenBabel核心.md",
-    "Others/2023-06-07-autodl.md",
-    "HDKMainVEX/Pasted image 20221124154213.png",
-    "HDKMainVEX/Pasted image 20221124154915.png",
     "HDKMainVEX",
-    "HDKMain/Pasted image 20221222195443.png",
     "HDKMain",
     "HDKBranchVEX",
     "HDKBranch",

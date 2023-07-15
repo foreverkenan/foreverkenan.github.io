@@ -20,8 +20,6 @@ Forked from https://github.com/LiXizhi/lixizhi.github.io
 
 遇到臭猪猪是我最幸运的事
 
-但我可能坚持不下去了
-
 [bilibili](https://space.bilibili.com/73693594?spm_id_from=333.1007.0.0)
 
 [知乎](https://www.zhihu.com/people/forevekenan)
